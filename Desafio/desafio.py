@@ -29,7 +29,18 @@ while True:
             print("Operação de valor inválido")
 
     elif opcao == 2:
-        print("Saque")
+        if numero_saques < LIMITE_SAQUES:
+            print("Qual valor deseja sacar?\n")
+            saque = float(input("R$"))
+            if saque < saldo:
+                saldo -= saque
+                print(f"\nSaldo atual: R${saldo:.2f}")
+                extrato += f"Saque no valor de R${saldo:.2f}\n"
+                numero_saques += 1
+            else:
+                print("Saldo insuficiente\n")
+        else:
+            print("Você chegou ao limite de número de saques!")
 
     elif opcao == 3:
         print("Extrato")

@@ -43,8 +43,8 @@ while True:
             print("Você chegou ao limite de número de saques!")
 
     elif opcao == 3:
-        print("Extrato")
-
+        print(f"Extrato:\n{extrato}")
+        
     elif opcao == 4:
         break
 
